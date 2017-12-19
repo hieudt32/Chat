@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="vn.iotech.firebasechat.Register">
+
+    <TableLayout
+        android:id="@+id/register_form"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_margin="10dp"
+            android:weightSum="5">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="User"
+                android:textColor="@android:color/black"
+                android:textSize="16dp" />
+
+            <EditText
+                android:id="@+id/user_name_edt"
+                android:layout_width="0dp"
+                android:layout_height="44dp"
+                android:layout_weight="4"
+                android:background="@android:color/white"
+                android:hint="Username"
+                android:paddingEnd="5dp"
+                android:paddingStart="5dp"
+                android:textColor="@android:color/black" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:weightSum="5">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Password"
+                android:textColor="@android:color/black"
+                android:textSize="16sp" />
+
+            <EditText
+                android:id="@+id/password_edt"
+                android:layout_width="0dp"
+                android:layout_height="44dp"
+                android:layout_weight="4"
+                android:background="@android:color/white"
+                android:hint="Password"
+                android:paddingEnd="5dp"
+                android:paddingStart="5dp"
+                android:textColor="@android:color/black" />
+        </TableRow>
+    </TableLayout>
+
+    <Button
+        android:id="@+id/register_bt_register"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@android:color/holo_blue_bright"
+        android:text="Register"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/register_form" />
+
+    <Button
+        android:id="@+id/exit_register_bt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:background="@android:color/holo_blue_bright"
+        android:text="Exit"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/register_bt_register"
+        app:layout_constraintTop_toBottomOf="@+id/register_form" />
+</android.support.constraint.ConstraintLayout>
