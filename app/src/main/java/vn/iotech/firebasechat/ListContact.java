@@ -32,7 +32,7 @@ public class ListContact extends AppCompatActivity {
     ListView mListContactLv;
     @BindView(R.id.empty_tv)
     TextView mEmptyTv;
-    private ArrayList<String> mListContact;
+    private ArrayList<String> mListContact = new ArrayList<>();
     private ProgressDialog mProgress;
     private int mTotalUser = 0;
 

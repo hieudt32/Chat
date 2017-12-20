@@ -6,12 +6,17 @@
     android:layout_height="match_parent"
     tools:context="vn.iotech.firebasechat.MainActivity">
 
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/splash" />
     <Button
         android:id="@+id/register_bt"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="15dp"
-        android:background="@android:color/holo_purple"
+        android:background="@drawable/bg_button"
         android:text="Register"
         app:layout_constraintBottom_toTopOf="@id/login_bt"
         app:layout_constraintLeft_toLeftOf="parent"
@@ -22,7 +27,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="15dp"
-        android:background="@android:color/holo_blue_dark"
+        android:background="@drawable/bg_button_two"
         android:text="Login"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"

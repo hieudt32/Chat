@@ -34,11 +34,6 @@ public class Register extends AppCompatActivity {
         register();
     }
 
-    @OnClick(R.id.exit_register_bt)
-    void doExitClick() {
-        onBackPressed();
-    }
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

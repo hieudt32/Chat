@@ -35,11 +35,6 @@ public class LoginActivity extends AppCompatActivity {
         login();
     }
 
-    @OnClick(R.id.exit_bt)
-    void doExitClick() {
-        onBackPressed();
-    }
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
