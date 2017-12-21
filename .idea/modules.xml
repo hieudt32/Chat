@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/FirebaseChat.iml" filepath="$PROJECT_DIR$/FirebaseChat.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/Chat.iml" filepath="$PROJECT_DIR$/.idea/Chat.iml" />
+      <module fileurl="file://D:\StudioProject\Chat\FirebaseChat.iml" filepath="D:\StudioProject\Chat\FirebaseChat.iml" />
       <module fileurl="file://$PROJECT_DIR$/IOTechCore/IOTechCore.iml" filepath="$PROJECT_DIR$/IOTechCore/IOTechCore.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
     </modules>
