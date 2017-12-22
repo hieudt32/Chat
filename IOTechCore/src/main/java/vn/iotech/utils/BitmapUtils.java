@@ -24,11 +24,12 @@ public class BitmapUtils {
 
     }
 
-    public static File resizePhoto(Uri photoUri, String realImagePath, Activity activity) {
+    public static File resizePhoto(Uri photoUri, String realImagePath, Activity activity,
+                                   float scaleX, float scaleY) {
         try {
             Bitmap bitmap = MediaUtils.decodeUri(activity, photoUri);
-            int width = bitmap.getWidth() * 2 / 3;
-            int height = bitmap.getHeight() * 2 / 3;
+            int width = (int) (bitmap.getWidth() * scaleX);
+            int height = (int) (bitmap.getHeight() * scaleY);
             bitmap = Bitmap.createScaledBitmap(bitmap, width, height, false);
             String parent = realImagePath.substring(0, realImagePath.lastIndexOf("/"));
             String newName = realImagePath.substring(realImagePath.lastIndexOf("/") + 1);
@@ -52,8 +53,6 @@ public class BitmapUtils {
             outputStream.flush();
             outputStream.close();
             return newFile;
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
         } catch (IOException e) {
             e.printStackTrace();
         }
