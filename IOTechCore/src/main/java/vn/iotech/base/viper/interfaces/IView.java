@@ -1,5 +1,6 @@
 package vn.iotech.base.viper.interfaces;
 
+import android.app.Activity;
 import android.support.v4.app.FragmentManager;
 import android.support.v7.app.AppCompatActivity;
 
@@ -16,7 +17,7 @@ public interface IView<P extends IPresenter> {
 
     BaseActivity getBaseActivity();
 
-    AppCompatActivity getViewContext();
+    Activity getViewContext();
 
     P getPresenter();
 

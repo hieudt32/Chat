@@ -3,6 +3,7 @@ package vn.iotech.base;
 import android.support.v4.app.FragmentManager;
 
 import vn.iotech.base.viper.interfaces.ContainerView;
+import vn.iotech.base.viper.interfaces.IView;
 
 /**
  * ContainerActivity
@@ -22,4 +23,11 @@ public abstract class ContainerActivity extends BaseActivity implements Containe
             finish();
         }
     }
+
+    @Override
+    public void loadView(IView view, int frameId) {
+
+    }
+
+
 }

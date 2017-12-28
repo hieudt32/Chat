@@ -11,6 +11,8 @@ import vn.iotech.base.viper.ViewFragment;
 
 public interface ContainerView extends IView {
 
+    ViewFragment onCreateFirstFragment();
+
     ViewFragment getViewFragment();
 
     void addView(IView view);
