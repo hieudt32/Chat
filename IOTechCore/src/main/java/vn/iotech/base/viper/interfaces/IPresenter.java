@@ -11,34 +11,36 @@ import android.support.v4.app.FragmentManager;
 
 public interface IPresenter<V extends IView, I extends IInteractor> {
 
-    void start();
+  void start();
 
-    V getView();
+  V getView();
 
-    V onCreateView();
+  V onCreateView();
 
-    I getIntoractor();
+  I getInteractor();
 
-    I onCreateInteractor();
+  I onCreateInteractor();
 
-    Fragment getFragment();
+  Fragment getFragment();
 
-    void presentView();
+  void presentView();
 
-    void pushView();
+  void pushView();
 
-    void pushChildView(int frameId, FragmentManager childFragmentManager);
+  void pushChildView(int frameId, FragmentManager childFragmentManager);
 
-    void loadChildView(int frameId, FragmentManager childFragmentManager);
+  void loadChildView(int frameId, FragmentManager childFragmentManager);
 
-    Activity getViewContext();
+  Activity getViewContext();
 
-    void registerEventBus();
+  void registerEventBus();
 
-    void unregisterEventBus();
+  void unregisterEventBus();
 
-    void back(int count);
+  void back(int count);
 
-    boolean isViewShown();
+  void onFragmentDisplay();
+
+  boolean isViewShown();
 
 }

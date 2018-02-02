@@ -9,4 +9,13 @@ import vn.iotech.base.viper.interfaces.IPresenter;
  */
 
 public abstract class Interactor<P extends IPresenter> implements IInteractor {
+  protected P mPresenter;
+
+  public Interactor(P presenter) {
+    mPresenter = presenter;
+  }
+
+  public P getPresenter() {
+    return mPresenter;
+  }
 }

@@ -13,22 +13,22 @@ import vn.iotech.base.BaseActivity;
 
 public interface IView<P extends IPresenter> {
 
-    void initLayout();
+  void initLayout();
 
-    BaseActivity getBaseActivity();
+  BaseActivity getBaseActivity();
 
-    Activity getViewContext();
+  Activity getViewContext();
 
-    P getPresenter();
+  P getPresenter();
 
-    void setPresenter(P presenter);
+  void setPresenter(P presenter);
 
-    void showProgress();
+  void showProgress();
 
-    void hideProgress();
+  void hideProgress();
 
-    FragmentManager getViewFragmentManager();
+  FragmentManager getViewFragmentManager();
 
-    boolean isShown();
+  boolean isShown();
 
 }
