@@ -10,8 +10,8 @@ import android.view.ViewGroup;
 
 import vn.iotech.base.BaseActivity;
 import vn.iotech.base.BaseFragment;
-import vn.iotech.base.viper.interfaces.IView;
-import vn.iotech.base.viper.interfaces.PresenterView;
+import vn.iotech.base.viper.interfaces.IPresenter;
+import vn.iotech.base.viper.interfaces.PresentView;
 import vn.iotech.utils.ContextUtils;
 import vn.iotech.utils.NetworkUtils;
 
@@ -20,7 +20,8 @@ import vn.iotech.utils.NetworkUtils;
  * Created by akai on 12/22/2017.
  */
 
-public abstract class ViewFragment<P extends Presenter> extends BaseFragment implements PresenterView<P> {
+public abstract class ViewFragment<P extends IPresenter>
+        extends BaseFragment implements PresentView<P> {
 
   protected P mPresenter;
   protected boolean mIsInitialized = false;
@@ -188,8 +189,9 @@ public abstract class ViewFragment<P extends Presenter> extends BaseFragment imp
   public boolean isViewHidden() {
     return mViewHidden;
   }
+
   @Override
   public boolean isShown() {
-    return isResumed() && this == BaseActivity.getTopFragment(getViewFragmentManager());
+    return isResumed() && this == BaseActivity.getTopFragment(getFragmentManager());
   }
 }

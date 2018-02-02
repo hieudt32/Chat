@@ -27,8 +27,4 @@ public interface IView<P extends IPresenter> {
 
   void hideProgress();
 
-  FragmentManager getViewFragmentManager();
-
-  boolean isShown();
-
 }

@@ -6,7 +6,7 @@ import android.support.v4.app.FragmentManager;
  * Created by akai on 2/2/2018.
  */
 
-public interface PresenterView<P extends IPresenter> extends IView<P> {
+public interface PresentView<P extends IPresenter> extends IView<P> {
   void showProgress();
 
   void hideProgress();
@@ -26,7 +26,7 @@ public interface PresenterView<P extends IPresenter> extends IView<P> {
   /**
    * check is top fragment of current activity or not
    */
-  boolean isShowing();
+  boolean isShown();
 
   /**
    * check fragment is visible or hidden

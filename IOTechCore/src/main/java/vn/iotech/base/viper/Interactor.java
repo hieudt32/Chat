@@ -8,7 +8,7 @@ import vn.iotech.base.viper.interfaces.IPresenter;
  * Created by akai on 12/22/2017.
  */
 
-public abstract class Interactor<P extends IPresenter> implements IInteractor {
+public abstract class Interactor<P extends IPresenter> implements IInteractor<P> {
   protected P mPresenter;
 
   public Interactor(P presenter) {
